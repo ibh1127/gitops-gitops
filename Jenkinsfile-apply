@@ -27,7 +27,6 @@ pipeline {
        
     }
     stage ('Verify test user') {
-      steps {
 	when {
 	 branch 'master'
 	}
@@ -36,7 +35,6 @@ pipeline {
 	 sh 'oc new-project test-testuser || true'
        
 	}
-      }
     }
   }
 }
